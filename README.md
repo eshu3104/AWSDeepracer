@@ -2,12 +2,31 @@
 This repository contains the reward function for optimizing AWS DeepRacer's performance on a specific track. The first iteration encourages staying on track, following the centerline, and maintaining speed while penalizing excessive steering.
 
 # Hyperparameters
-Min Speed: 1.5 m/s
-Max Speed: 2.5 m/s
-Learning Rate: 1e-4
-Discount Factor (Gamma): 0.95
-Clipping Epsilon: 0.2
-Batch Size: 64
+Gradient descent batch size
+64
+Entropy
+0.01
+Discount factor
+0.95
+Loss type
+Huber
+Learning rate
+0.0003
+Number of experience episodes between each policy-updating iteration
+20
+Number of epochs
+10
+
+# Setup
+Action space type
+Continuous
+Action space
+Speed: [ 1.2 : 2 ] m/s
+Steering angle: [ -30 : 30 ] °
+Framework
+Tensorflow
+Reinforcement learning algorithm
+PPO
 
 # Training Strategy
 Initial Testing (20 mins): Verify model stability.
